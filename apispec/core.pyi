@@ -12,6 +12,7 @@ class Components:
     Components are top-level fields in OAS v2.
     They became sub-fields of "components" top-level field in OAS v3.
     """
+    schemas: dict
     def __init__(self, plugins, openapi_version) -> None:
         ...
     
@@ -120,6 +121,7 @@ class APISpec:
     :param options: Optional top-level keys
         See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md#openapi-object
     """
+    components: Components
     def __init__(self, title, version, openapi_version, plugins=..., **options) -> None:
         ...
     
